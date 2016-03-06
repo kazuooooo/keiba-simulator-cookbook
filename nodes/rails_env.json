@@ -20,7 +20,7 @@
     "nginx":{
         "dir": "/etc/nginx",
         "pid": "/run/nginx.pid",
-        "default_root": "/home/ec2-user/app_root/current",
+        "default_root": "/var/www/keiba-simulator/current",
         "user": "root"
     },
     "simple_iptables":{
