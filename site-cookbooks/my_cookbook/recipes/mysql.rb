@@ -25,7 +25,7 @@ end
 # executeブロックで上記のコピーしたsqlファイルを実行
 execute "exec create databases sql" do
   command "mysql -u root --password='#{node['mysql']['server_root_password']}' < /home/#{node['mysql']['user']}/create_databases.sql"
-  not_if "mysql -u root -p#{node['mysql']['server_root_password']} -D #{node['mysql']['staging_db_name']}"
+  not_if "mysql -u root -p#{node['mysql']['server_root_password']} -D #{node['mysql']['production_db_name']}"
   user node['mysql']['user']
   group node['mysql']['group']
   environment 'HOME' => "/home/#{node['mysql']['user']}"
@@ -33,7 +33,7 @@ end
 
 execute "exec create users sql" do
   command "mysql -u root --password='#{node['mysql']['server_root_password']}' < /home/#{node['mysql']['user']}/create_users.sql"
-  not_if "mysql -u #{node['mysql']['staging_user_name']} -p#{node['mysql']['staging_password']}"
+  not_if "mysql -u #{node['mysql']['production_user_name']} -p#{node['mysql']['production_password']}"
   user node['mysql']['user']
   group node['mysql']['group']
   environment 'HOME' => "/home/#{node['mysql']['user']}"

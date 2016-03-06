@@ -3,9 +3,8 @@ node.override[:rbenv_install_rubies][:gems] = ['bundler', 'rbenv-rehash', 'pry']
 node.override[:rbenv_install_rubies][:other_versions] = []
 node.override[:rbenv_install_rubies][:lib_packages] = []
 # mysql
-node.default["staging_cookbook"]["server_name"] = "vagrant.local"
-node.default["mysql"]["staging_db_name"] = "db_staging"
-node.default["mysql"]["staging_user_name"] = "user_staging"
-node.default["mysql"]["staging_password"] = "pass_staging"
-node.default["mysql"]["user"] = "vagrant"
-node.default["mysql"]["group"] = "vagrant"
+node.default["mysql"]["production_db_name"] = "keiba_simulator_production"
+node.default["mysql"]["production_user_name"] = "user_staging"
+node.default["mysql"]["production_password"] = "keiba"
+node.default["mysql"]["user"] = "ec2-user"
+node.default["mysql"]["group"] = "ec2-user"

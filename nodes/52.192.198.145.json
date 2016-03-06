@@ -10,12 +10,13 @@
       "rbenv",
       "ruby_build",
       "nginx",
-      "sqlite",
+      "mysql",
       "rbenv-install-rubies",
       "recipe[my_cookbook::nginx_conf]",
       "recipe[my_cookbook::secrets]",
       "recipe[my_cookbook::create_user]",
-      "recipe[my_cookbook::iptables]"
+      "recipe[my_cookbook::iptables]",
+      "recipe[my_cookbook::mysql]"
   ],
   "nginx":{
       "dir": "/etc/nginx",

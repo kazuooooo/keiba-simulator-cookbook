@@ -1,4 +1,5 @@
 DEPENDENCIES
+  mysql (~> 5.3.6)
   nginx
   rbenv
   rbenv-install-rubies (~> 0.2.1)
@@ -18,6 +19,8 @@ GRAPH
     dmg (>= 0.0.0)
     windows (>= 0.0.0)
     yum-epel (>= 0.0.0)
+  mysql (5.3.6)
+    yum-mysql-community (>= 0.0.0)
   nginx (2.7.6)
     apt (~> 2.2)
     bluepill (~> 2.3)
@@ -45,3 +48,5 @@ GRAPH
   yum (3.8.2)
   yum-epel (0.6.5)
     yum (~> 3.2)
+  yum-mysql-community (0.1.21)
+    yum (>= 3.2)
