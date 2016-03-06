@@ -1,0 +1,32 @@
+{
+    "rbenv":{
+        "root": "/opt/rbenv"
+    },
+    "ruby_build":{
+        "prefix": "/opt/rbenv/plugins/ruby_build",
+        "bin_path": "/opt/rbenv/plugins/ruby_build/bin"
+    },
+    "run_list":[
+        "rbenv",
+        "ruby_build",
+        "nginx",
+        "sqlite",
+        "rbenv-install-rubies",
+        "recipe[my_cookbook::nginx_conf]",
+        "recipe[my_cookbook::secrets]",
+        "recipe[my_cookbook::create_user]",
+        "recipe[my_cookbook::iptables]"
+    ],
+    "nginx":{
+        "dir": "/etc/nginx",
+        "pid": "/run/nginx.pid",
+        "default_root": "/home/ec2-user/app_root/current",
+        "user": "ec2-user"
+    },
+    "simple_iptables":{
+        "ip_versions": ["ipv4", "ipv6"]
+    },
+    "automatic": {
+      "ipaddress": "52.193.216.45"
+    }
+}
