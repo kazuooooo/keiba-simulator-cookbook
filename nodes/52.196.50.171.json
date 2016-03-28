@@ -1,0 +1,8 @@
+{
+  "run_list": [
+    "recipe[keiba-simulator::rbenv_ruby]"
+  ],
+  "automatic": {
+    "ipaddress": "52.196.50.171"
+  }
+}
