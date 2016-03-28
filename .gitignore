@@ -32,3 +32,4 @@ bin/*
 /cookbooks/
 /vendor
 .secret/
+.idea/
