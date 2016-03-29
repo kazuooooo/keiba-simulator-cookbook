@@ -1,6 +1,9 @@
 {
   "run_list": [
-    "recipe[keiba-simulator::rbenv_ruby]"
+    "recipe[keiba-simulator::rbenv_ruby]",
+    "recipe[keiba-simulator::mysql]",
+    "nginx",
+    "recipe[keiba-simulator::nginx]"
   ],
   "automatic": {
     "ipaddress": "52.196.50.171"

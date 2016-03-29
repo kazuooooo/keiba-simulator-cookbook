@@ -1,4 +1,4 @@
 include_recipe "rbenv::default"
 include_recipe "rbenv::ruby_build"
 # instal ruby
-rbenv_ruby "2.2.4"
+rbenv_ruby node['rbenv_ruby']['global']

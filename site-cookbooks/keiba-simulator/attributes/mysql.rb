@@ -1,0 +1,5 @@
+node.default["mysql"]["production_db_name"] = "keiba_simulator_production"
+node.default["mysql"]["production_user_name"] = "user_staging"
+node.default["mysql"]["production_password"] = "keiba"
+node.default["mysql"]["user"] = "ubuntu"
+node.default["mysql"]["group"] = "ubuntu"

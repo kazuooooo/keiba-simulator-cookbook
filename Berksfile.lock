@@ -1,4 +1,5 @@
 DEPENDENCIES
+  nginx
   rbenv (~> 1.7.1)
 
 GRAPH
@@ -12,12 +13,21 @@ GRAPH
     dmg (>= 0.0.0)
     windows (>= 0.0.0)
     yum-epel (>= 0.0.0)
+  nginx (1.8.0)
+    apt (>= 0.0.0)
+    build-essential (>= 0.0.0)
+    ohai (>= 1.1.4)
+    runit (>= 0.0.0)
+    yum (>= 0.0.0)
   ohai (3.0.1)
+  packagecloud (0.2.0)
   rbenv (1.7.1)
     apt (>= 0.0.0)
     build-essential (>= 0.0.0)
     git (>= 0.0.0)
     ohai (>= 1.1)
+  runit (1.7.6)
+    packagecloud (>= 0.0.0)
   seven_zip (2.0.0)
     windows (>= 1.2.2)
   windows (1.39.2)
