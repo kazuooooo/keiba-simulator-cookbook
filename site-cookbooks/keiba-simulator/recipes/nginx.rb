@@ -4,7 +4,7 @@ nginx_site 'default' do
   enable false
 end
 
-template "#{node.default['nginx']['source']['conf_path']}" do
+template "/etc/nginx/conf.d/nginx.conf" do
   source 'nginx.conf.erb'
   mode 0644
   owner 'ubuntu'
